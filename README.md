@@ -89,6 +89,12 @@ You can pass in the following options.
 * alwaysReturn - default false.  Return an object when colors aren't
   supported (instead of returning `false`).
 
+## CLI
+
+You can run the `color-support` bin from the command line which will
+just dump the values as this module calculates them in whatever env
+it's run.  It takes no command line arguments.
+
 ## Credits
 
 This is a spiritual, if not actual, fork of
