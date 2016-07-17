@@ -3,6 +3,8 @@
 A module which will endeavor to guess your terminal's level of color
 support.
 
+[![Build Status](https://travis-ci.org/isaacs/color-support.svg?branch=master)](https://travis-ci.org/isaacs/color-support) [![Coverage Status](https://coveralls.io/repos/github/isaacs/color-support/badge.svg?branch=master)](https://coveralls.io/github/isaacs/color-support?branch=master)
+
 This is similar to `supports-color`, but it does not read
 `process.argv`.
 
