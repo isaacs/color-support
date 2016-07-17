@@ -1,0 +1,33 @@
+{
+  "name": "color-support",
+  "version": "0.0.0",
+  "description": "A module which will endeavor to guess your terminal's level of color support.",
+  "main": "index.js",
+  "browser": "browser.js",
+  "bin": "bin.js",
+  "devDependencies": {
+    "tap": "^6.2.0"
+  },
+  "scripts": {
+    "test": "tap test/*.js --cov --branches=100"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/isaacs/color-support.git"
+  },
+  "keywords": [
+    "terminal",
+    "color",
+    "support",
+    "xterm",
+    "truecolor",
+    "256"
+  ],
+  "author": "Isaac Z. Schlueter <i@izs.me> (http://blog.izs.me/)",
+  "license": "ISC",
+  "files": [
+    "browser.js",
+    "index.js",
+    "bin.js"
+  ]
+}
