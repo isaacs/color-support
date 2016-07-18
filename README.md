@@ -90,6 +90,31 @@ You can pass in the following options.
 * term - String for `TERM` checking. Defaults to `env.TERM`.
 * alwaysReturn - default false.  Return an object when colors aren't
   supported (instead of returning `false`).
+* level - A number from 0 to 3.  This will return a result for the
+  specified level.  This is useful if you want to be able to set the
+  color support level explicitly as a number in an environment
+  variable or config, but then use the object flags in your program.
+  Except for `alwaysReturn` to return an object for level 0, all other
+  options are ignored, since no checking is done if a level is
+  explicitly set.
+
+## Return Value
+
+If no color support is available, then `false` is returned by default,
+unless the `alwaysReturn` flag is set to `true`.  This is so that the
+simple question of "can I use colors or not" can treat any truthy
+return as "yes".
+
+Otherwise, the return object has the following fields:
+
+* `level` - A number from 0 to 3
+    * `0` - No color support
+    * `1` - Basic (16) color support
+    * `2` - 256 color support
+    * `3` - 16 million (true) color support
+* `hasBasic` - Boolean
+* `has256` - Boolean
+* `has16m` - Boolean
 
 ## CLI
 

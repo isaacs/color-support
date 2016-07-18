@@ -232,3 +232,13 @@ t.test('mutates an object passed in', function (t) {
   t.match(obj.level, Number)
   t.end()
 })
+
+t.test('getting a specific level', function (t) {
+  t.match(colorSupport({ level: 0, alwaysReturn: true }), hasNone)
+  t.notOk(colorSupport({ level: 0 }))
+  t.match(colorSupport({ level: 1 }), hasBasic)
+  t.match(colorSupport({ level: 2 }), has256)
+  t.match(colorSupport({ level: 3 }), has16m)
+  t.match(colorSupport({ level: 4 }), colorSupport())
+  t.end()
+})

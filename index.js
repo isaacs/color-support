@@ -40,6 +40,21 @@ function colorSupport (options, obj) {
   options = options || {}
 
   obj = obj || {}
+
+  // if just requesting a specific level, then return that.
+  if (typeof options.level === 'number') {
+    switch (options.level) {
+      case 0:
+        return hasNone(obj, options)
+      case 1:
+        return hasBasic(obj)
+      case 2:
+        return has256(obj)
+      case 3:
+        return has16m(obj)
+    }
+  }
+
   obj.level = 0
   obj.hasBasic = false
   obj.has256 = false
