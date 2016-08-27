@@ -6,7 +6,7 @@
   "browser": "browser.js",
   "bin": "bin.js",
   "devDependencies": {
-    "tap": "^6.2.0"
+    "tap": "^7.0.0"
   },
   "scripts": {
     "test": "tap test/*.js --cov --branches=100"
