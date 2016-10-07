@@ -108,6 +108,7 @@ function colorSupport (options, obj) {
       }
 
     case 'HyperTerm':
+    case 'Hyper':
       return has16m(obj)
 
     case 'MacTerm':

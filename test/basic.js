@@ -129,6 +129,16 @@ t.test('TERM_PROGRAM', function (t) {
     ignoreDumb: true,
     platform: 'darwin',
     env: {
+      TERM_PROGRAM: 'Hyper',
+      TERM_PROGRAM_VERSION: '0.8.9'
+    }
+  }), has16m)
+
+  t.same(colorSupport({
+    ignoreTTY: true,
+    ignoreDumb: true,
+    platform: 'darwin',
+    env: {
       TERM_PROGRAM: 'HyperTerm',
       TERM_PROGRAM_VERSION: '0.7.0'
     }
