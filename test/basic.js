@@ -45,8 +45,9 @@ t.test('set fields on top level', function (t) {
 t.test('non-node = no colors', function (t) {
   var p = process.env
   process.env = null
-  t.notOk(colorSupport())
+  var supported = colorSupport()
   process.env = p
+  t.notOk(supported)
   t.end()
 })
 
@@ -69,7 +70,7 @@ t.test('colors depend on being a tty', function (t) {
 })
 
 t.test('TERM=dumb', function (t) {
-  t.notOk(colorSupport({ term: 'dumb', ignoreTTY: true }))
+  t.notOk(colorSupport({ term: 'dumb', ignoreTTY: true, env: {} }))
 
   t.same(colorSupport({
     term: 'dumb',
