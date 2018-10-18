@@ -6,7 +6,7 @@
   "browser": "browser.js",
   "bin": "bin.js",
   "devDependencies": {
-    "tap": "^10.3.3"
+    "tap": "^12.0.1"
   },
   "scripts": {
     "test": "tap test/*.js --100 -J",
